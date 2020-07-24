@@ -9,6 +9,7 @@ function App() {
     setTypedText(e.target.value);
   }
 
+  // Looks great - what if you needed 50? Can you make this code a bit more dynamic?
 
   return (
     <div >
