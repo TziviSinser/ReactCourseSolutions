@@ -1,23 +1,15 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import CoordinatedTextboxes from './coordinatedTextboxes';
 
 function App() {
-  const [typedText, setTypedText] = useState(new String("AA"));
   
-  function copyText(e) {
-    setTypedText(e.target.value);
-  }
-
 
   return (
-    <div >
-      <input type="text" value={typedText} onChange={copyText}></input>
-      <input type="text" value={typedText} onChange={copyText}></input>
-      <input type="text" value={typedText} onChange={copyText}></input>
-      <input type="text" value={typedText} onChange={copyText}></input>
-      <input type="text" value={typedText} onChange={copyText}></input>
-    </div>
+    <>
+    <CoordinatedTextboxes number={5}/>
+    </>
   );
 }
 
