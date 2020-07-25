@@ -1,8 +1,10 @@
 import React from 'react';
+import { useState } from 'react';
+
 
 export default function CoordinatedTextboxes(props){
     const {number} = props;
-    const [typedText, setTypedText] = useState(new String("AA"));
+    const [typedText, setTypedText] = useState(new String(""));
   
     function copyText(e) {
         setTypedText(e.target.value);
