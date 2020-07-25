@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-    <CoordinatedTextboxes number={5}/>
+    <CoordinatedTextboxes number={50}/>
     </>
   );
 }
