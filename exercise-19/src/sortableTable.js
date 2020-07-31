@@ -14,21 +14,21 @@ export default function SortableTable(props){
     const rows = data.slice(1); 
 
     function sortTable(column){
-        debugger;
+        //debugger;
         if(column == sortColumn){
         setIsAscending(isAscending => !isAscending);
         }
-        
+
 
         setSortColumn(column);
     }
 
-     _.sortBy(rows, row => row[sortColumn]);
+     var sorted =_.sortBy(rows, row => row[sortColumn]);
      debugger;
 
 
      if(!isAscending){
-        rows.reverse();
+        sorted.reverse();
      }
 
 
@@ -47,7 +47,7 @@ export default function SortableTable(props){
               </tr>
             </thead>
             <tbody>
-            {rows.map((row, i) => (
+            {sorted.map((row, i) => (
                 <tr key={i}>
                 {row.map((col, j) => (
                     <td key={j+'_'+headers[j]}>
